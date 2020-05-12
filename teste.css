@@ -39,8 +39,30 @@ a:hover {
  font-style: italic;
 }
 
+.typing-animation {
+  animation: blinkCursor 500ms steps(40) infinite normal,
+    typing 3s steps(40) 1s normal both;
+}
 
+@keyframes typing {
+  from {
+    width: 0;
+    
+  }
+  to {
+    width: 60vw;
+    
+  }
+}
 
+@keyframes blinkCursor {
+  from {
+    border-right-color: transparent;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
 
 
 
