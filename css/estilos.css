@@ -24,9 +24,9 @@ body {
 
 header {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; /*deixa tudo em uma unica linha*/
+  align-items: center; /*so funciona por causa do flex*/
+  justify-content: center; /*so funciona por causa do flex*/
   flex-wrap: wrap;
 }
 
