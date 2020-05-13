@@ -18,9 +18,10 @@ body {
 }
 
 /* breakpoint */
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
   body {
     font-size: 22px;
+    /* se for menor que 600px muda o fundo para verde */
     background-image: none;
     background-color: darkgreen;
   }
