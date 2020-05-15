@@ -6,19 +6,19 @@
 
 body {
   background-image: url('../img/fundo.jpg');
-  background-size: auto 100vh;
-  height: 100vh;
+  background-size: auto 80vh;
+  height: 80vh;
 }
 
-/* se a tela tiver pelo menos 400px vai carregar estes estilos */
-@media (min-width: 400px) {
+/* se a tela for menor que 500px diminui a fonte */
+@media (min-width: 500px) {
   body {
     font-size: 18px;
   }
 }
 
 /* breakpoint */
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   body {
     font-size: 22px;
     /* se for menor que 600px muda o fundo para verde */
@@ -28,7 +28,7 @@ body {
 }
 
 header {
-  height: 100vh;
+  height: 60vh;
   display: flex; /*deixa tudo em uma unica linha*/
   align-items: center; /*so funciona por causa do flex*/
   justify-content: center; /*so funciona por causa do flex*/
@@ -60,8 +60,8 @@ header {
 
 .site-title {
   color: whitesmoke;
-  text-align: center;
   font-family: 'Kaushan Script', cursive;
+  text-align: center;
 }
 
 .site-subtitle {
@@ -72,7 +72,98 @@ header {
   font-size: 2em;
 }
 
-.img-portfolio {
-  height: 180px;
-  width: 180px;
+.foto-rods {
+  /*centraliza imagem*/
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  /*=================*/
+  height: 100px;  
+  width: 350px;
 }
+
+.img-portfolio {
+  height: 200px;
+  width: 200px;
+}
+
+.portifolio {
+  padding: 2em;
+}
+
+.portifolio h2 {
+  font-family: 'Kaushan Script', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.portifolio .grid {
+  display: grid; /*o grid não força coluna*/
+  gap: 1em; /*distancia entre colunas*/
+}
+
+/*aqui falo que se a tela for menor que 560px tera uma coluna, acima tera 2*/
+@media (min-width: 560px){
+  .portifolio .grid {
+    grid-template-columns: 200px 200px; /*especifico que quero 2 colunas de 150px*/
+  }
+}
+
+/*aqui falo que acima de 880px tera 3 colunas*/
+@media (min-width: 880px){
+  .portifolio .grid {
+    /*grid-template-columns: 200px 200px 200px; /*especifico que quero 2 colunas de 150px*/
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+  }
+}
+
+.portifolio figure {
+  text-align: center;
+}
+
+.ecomerce {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2em;
+}
+
+.mobile {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2em;
+}
+
+.webdesign {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2em;
+}
+
+.projetospessoais {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2em;
+}
+
+/*=================================================*/
+.typing-animation {
+  animation: blinkCursor 200ms steps(80) infinite normal,
+    typing 8s steps(80) 1s normal both;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60vw;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: transparent;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+/*=================================================*/
